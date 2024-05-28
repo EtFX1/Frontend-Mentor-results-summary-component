@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --organgey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --myFont: "HankenGrotesk-VariableFont_wght";
+}
+
+@font-face {
+    font-family: "HankenGrotesk-VariableFont_wght";
+    src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+body {
+    font-size: 18px;
+    font-family: var(--myFont);
+}
