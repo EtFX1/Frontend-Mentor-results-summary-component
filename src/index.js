@@ -2,13 +2,8 @@ let avgScore = document.querySelector(".avg-score");
 const button = document.querySelector(".continue-btn");
 
 
-button.addEventListener("click", () => {
-  displayData();
-})
-
-
 // *function that retrieves and displays json data
-async function displayData() {
+(async function () {
   async function getData() {
 
     // retrieving array from json file
@@ -28,7 +23,7 @@ async function displayData() {
   const average = Math.floor((score1 + score2 + score3 + score4) / 4);
 
   avgScore.innerText = average
-};
+})();
 
 
 
