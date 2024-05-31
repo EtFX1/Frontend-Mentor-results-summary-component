@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     font-size: 1.125rem;
     font-family: var(--myFont);
+    letter-spacing: 0.4px;
 }
 
 /* *contains both sections */
@@ -83,7 +84,7 @@ h1#heading span {
     position: absolute;
 }
 
-.score {
+.avg-score {
     top: 0.875rem;
     left: 1.625rem;
     font-size: 2.125rem;
@@ -92,10 +93,10 @@ h1#heading span {
 }
 
 .of-100-text {
-    font-size: 0.625rem;
+    font-size: 0.6rem;
     font-weight: 500;
     top: 3.5625rem;
-    left: 1.9688rem;
+    left: 1.9rem;
     color: hsla(241, 100%, 89%, 0.497);
 }
 
@@ -106,6 +107,7 @@ h1#heading span {
     margin-bottom: 0.5rem;
 }
 
+/** "You scored higher than... paragraph" */
 .statistic {
     color: hsla(241, 100%, 89%, 0.69);
     font-size: 0.75rem;
