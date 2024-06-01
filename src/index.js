@@ -1,5 +1,4 @@
 let avgScore = document.querySelector(".avg-score");
-const button = document.querySelector(".continue-btn");
 
 
 // *function that retrieves and displays json data
