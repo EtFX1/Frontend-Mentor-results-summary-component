@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* *colors */
+/* *colours */
 :root {
     --light-red: hsl(0, 100%, 67%);
     --organgey-yellow: hsl(39, 100%, 56%);
@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     font-size: 1.125rem;
     font-family: var(--myFont);
-    letter-spacing: 0.4px;
+    letter-spacing: 0.025rem;
 }
 
 /* *contains both sections */
@@ -48,8 +48,7 @@ section.result-section {
         var(--light-royal-blue)
     );
     border-radius: 0 0 1.25rem 1.25rem;
-    padding: 15px 20px 25px;
-    /* todo: add clamp */
+    padding: 1.1rem 0 1.8rem;
 }
 
 /* *text container in purple background */
@@ -61,8 +60,8 @@ div.result-text {
 
 /* *"Your result" text */
 h3.top-text {
-    color: var(--light-lavender);
-    font-size: 0.7rem;
+    color: hsla(222, 100%, 96%, 0.805);
+    font-size: clamp(0.7rem, 3.5vw, 0.95rem);
     font-weight: 500;
     margin-bottom: 0.9375rem;
 }
@@ -75,41 +74,45 @@ h3.top-text {
         rgba(78, 33, 202, 0)
     );
     border-radius: 50%;
-    width: 5.625rem;
-    height: 5.625rem;
+    width: clamp(5.625rem, 28.5vw, 8.1rem);
+    height: clamp(5.625rem, 28.5vw, 8.1rem);
     margin: 0 auto 0.9375rem;
 }
 
+/* *both span elements in the heading */
 h1#heading span {
     position: absolute;
 }
 
+/* 76 */
 .avg-score {
-    top: 0.875rem;
-    left: 1.625rem;
-    font-size: 2.125rem;
+    top: clamp(1rem, 15%, 1.25rem);
+    left: 0;
+    right: 0;
+    font-size: clamp(2.125rem, 10.5vw, 3.4375rem);
     color: white;
     font-weight: 700;
 }
 
 .of-100-text {
-    font-size: 0.6rem;
+    top: 67%;
+    left: 4vw;
+    right: 4vw;
+    font-size: clamp(0.625rem, 2.75vw, 0.75rem);
     font-weight: 500;
-    top: 3.5625rem;
-    left: 1.9rem;
-    color: hsla(241, 100%, 89%, 0.497);
+    color: hsla(241, 100%, 89%, 0.445);
 }
 
 .great-text {
     font-weight: 500;
     color: white;
-    font-size: 1.125rem;
+    font-size: 1.05rem;
     margin-bottom: 0.5rem;
 }
 
 /** "You scored higher than... paragraph" */
 .statistic {
-    color: hsla(241, 100%, 89%, 0.69);
-    font-size: 0.75rem;
-    font-weight: 500;
+    color: hsla(241, 100%, 89%, 0.936);
+    font-size: 0.7rem;
+    font-weight: 400;
 }
