@@ -28,23 +28,15 @@
 
 /* *contains main */
 body {
-    display: flex;
-    flex-direction: column;
     font-size: 1.125rem;
     font-family: var(--myFont);
     letter-spacing: 0.025rem;
 }
 
-/* *contains both sections */
-main {
-    display: flex;
-    flex-direction: column;
-}
-
 /* *purple background */
 section.result-section {
-    border-radius: 0 0 1.25rem 1.25rem;
-    padding: 1.1rem 0 1.8rem;
+    border-radius: 0 0 2rem 1.5rem;
+    padding: 2rem 0 1.8rem;
 }
 
 section.result-section,
@@ -230,4 +222,36 @@ h2.great-text,
 span.out-of-100,
 button.continue-btn {
     font-weight: 500;
+}
+
+/* !DESKTOP */
+
+/* 1000px */
+
+@media only screen and (min-width: 62rem) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.106);
+    }
+
+    main {
+        width: 75%;
+    }
+
+    section.result-section {
+        border-radius: 2rem;
+    }
+
+    div.bg {
+        border-radius: 2rem;
+        display: flex;
+        background-color: white;
+    }
+
+    /* div.result-text {
+        margin-top: 50px;
+    } */
 }
