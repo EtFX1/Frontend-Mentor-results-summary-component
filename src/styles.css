@@ -56,8 +56,8 @@ div.result-text {
 /* *"Your result" text */
 h3.top-text {
     color: hsla(222, 100%, 96%, 0.805);
-    font-size: clamp(0.7rem, 3.5vw, 0.95rem);
-    margin-bottom: 0.9375rem;
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    margin-bottom: 1.2rem;
 }
 
 /* *circle around "76 of 100" */
@@ -68,9 +68,9 @@ div.results-circle {
         rgba(78, 33, 202, 0)
     );
     border-radius: 50%;
-    width: clamp(5.625rem, 28.5vw, 8.1rem);
-    height: clamp(5.625rem, 28.5vw, 8.1rem);
-    margin: 0 auto 0.9375rem;
+    width: clamp(5.625rem, 28.5vw, 11rem);
+    height: clamp(5.625rem, 28.5vw, 11rem);
+    margin: 0 auto 1.5rem;
 }
 
 /* *both span elements in the heading */
@@ -80,24 +80,24 @@ h1#heading span {
 
 /* *76 */
 span.avg-score {
-    top: clamp(1rem, 15%, 1.25rem);
+    top: clamp(1rem, 20%, 2rem);
     left: 0;
     right: 0;
-    font-size: clamp(2.125rem, 10.5vw, 3.4375rem);
+    font-size: clamp(2.125rem, 10.5vw, 3.7rem);
     color: white;
 }
 
 span.of-100-text {
-    top: 67%;
+    top: 65%;
     left: 4vw;
     right: 4vw;
-    font-size: clamp(0.625rem, 2.75vw, 0.75rem);
+    font-size: clamp(0.625rem, 3.25vw, 0.9rem);
     color: hsla(241, 100%, 89%, 0.445);
 }
 
 h2.great-text {
     color: white;
-    font-size: 1.05rem;
+    font-size: clamp(1rem, 5.3vw, 1.3rem);
     margin-bottom: 0.5rem;
 }
 
@@ -108,7 +108,7 @@ div.statistic-cont {
 /** "You scored higher than... paragraph" */
 p.statistic {
     color: hsla(241, 100%, 89%, 0.936);
-    font-size: clamp(0.625rem, 3.5vw, 0.9375rem);
+    font-size: clamp(0.625rem, 3.5vw, 0.9rem);
     font-weight: 400;
 }
 
@@ -125,22 +125,15 @@ section.summary-section {
 }
 
 h4.summary-heading {
-    font-size: 0.9375rem;
-    margin-bottom: 0.7813rem;
+    font-size: clamp(0.9375rem, 4vw, 1.25rem);
+    margin-bottom: 20px;
 }
 
-/* *4 components in the summary container */
-div.summary-components-cont {
-    display: flex;
-    flex-direction: column;
-}
-
-/* *summary component */
 div.summary-component {
     display: flex;
-    padding: clamp(0.6875rem, 4%, 0.9375rem) 3%;
+    padding: clamp(0.6875rem, 6%, 0.9375rem) 4%;
     border-radius: 0.4rem;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
 }
 
 div.text-and-score > * {
@@ -150,7 +143,7 @@ div.text-and-score > * {
 /* *component text and score container */
 div.text-and-score {
     display: flex;
-    width: 92%;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -238,20 +231,47 @@ button.continue-btn {
     }
 
     main {
-        width: 75%;
+        width: clamp(600px, 60%, 650px);
+    }
+
+    /* *white background around both results and summary section */
+    div.bg {
+        border-radius: 2rem;
+        display: flex;
+        background-color: rgb(255, 255, 255);
     }
 
     section.result-section {
         border-radius: 2rem;
     }
 
-    div.bg {
-        border-radius: 2rem;
-        display: flex;
-        background-color: white;
+    div.results-circle {
+        margin-bottom: 2rem;
     }
 
-    /* div.result-text {
-        margin-top: 50px;
-    } */
+    section.summary-section {
+        padding: 5% 5% 8%;
+    }
+
+    /* *"Your result" text */
+    h3.top-text {
+        margin-bottom: 25px;
+    }
+
+    h2.great-text {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    h4.summary-heading {
+        font-size: 20px;
+    }
+
+    div.summary-component {
+        margin-bottom: 6%;
+    }
+
+    p.statistic {
+        font-size: 0.9rem;
+    }
 }
