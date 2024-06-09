@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: "HankenGrotesk-VariableFont_wght";
-    src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+    src: url("./HankenGrotesk-VariableFont_wght.ttf");
 }
 
 /* *contains main */
