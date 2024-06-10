@@ -239,6 +239,7 @@ button.continue-btn {
         border-radius: 2rem;
         display: flex;
         background-color: rgb(255, 255, 255);
+        box-shadow: 0.625rem 0.625rem 0.9375rem 0.3rem hsl(241, 100%, 89%, 0.2);
     }
 
     section.result-section {
