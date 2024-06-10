@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://github.com/EtFX1/Frontend-Mentor-results-summary-component)
--   Live Site URL: [Add live site URL here](https://results-component-6d3d4d.netlify.app/)
+-   [Solution URL](https://github.com/EtFX1/Frontend-Mentor-results-summary-component)
+-   [Live Site URL](https://results-component-6d3d4d.netlify.app/)
 
 ## My process
 
