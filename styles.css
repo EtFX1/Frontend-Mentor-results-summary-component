@@ -192,7 +192,7 @@ h5.visual-text {
 }
 
 button.continue-btn {
-    font-family: "HankenGrotesk-VariableFont_wght";
+    font-family: var(--myFont);
     border: none;
     border-radius: 1.875rem;
     padding: 0.9rem;
