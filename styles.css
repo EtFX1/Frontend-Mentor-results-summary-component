@@ -15,15 +15,10 @@
     --light-royal-blue: hsl(241, 81%, 54%);
     --violet-blue: hsla(256, 72%, 46%, 1);
     --persian-blue: hsla(241, 72%, 46%, 0);
-    --myFont: "HankenGrotesk-VariableFont_wght";
+    --myFont: "Hanken Grotesk", sans-serif;
     --pale-blue: hsl(221, 100%, 96%);
     --light-lavender: hsl(241, 100%, 89%);
     --dark-gray-blue: hsl(224, 30%, 27%);
-}
-
-@font-face {
-    font-family: "HankenGrotesk-VariableFont_wght";
-    src: url("./HankenGrotesk-VariableFont_wght.ttf");
 }
 
 /* *contains main */
