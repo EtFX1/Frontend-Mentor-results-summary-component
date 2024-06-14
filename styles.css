@@ -7,56 +7,77 @@
 /* @!RESULT SECTION */
 /* *colours */
 :root {
-    --light-red: hsl(0, 91%, 63%);
-    --organgey-yellow: hsl(39, 100%, 56%);
-    --green-teal: hsl(166, 100%, 37%);
-    --cobalt-blue: hsl(234, 85%, 45%);
-    --light-slate-blue: hsl(252, 100%, 67%);
-    --light-royal-blue: hsl(241, 81%, 54%);
-    --violet-blue: hsla(256, 72%, 46%, 1);
-    --persian-blue: hsla(241, 72%, 46%, 0);
+    /* font sizes */
+    --body-font-size: 1.125rem;
+    --result-text-font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    --avg-score-font-size: clamp(2.125rem, 10.5vw, 3.7rem);
+    --of-100-text-font-size: clamp(0.625rem, 3.25vw, 0.9rem);
+    --great-text-font-size: clamp(1rem, 5.3vw, 1.3rem);
+    --paragraph-font-size: clamp(0.625rem, 3.5vw, 0.9rem);
+    --summary-heading-font-size: clamp(0.9375rem, 4vw, 1.25rem);
+    --text-and-score-font-size: clamp(0.75rem, 3.9vw, 1rem);
+
+    /* font weights */
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+    --button-font-size: 0.9375rem;
+    --margin-horizontally-centred: 0 auto;
+
+    /* font family */
     --myFont: "Hanken Grotesk", sans-serif;
-    --pale-blue: hsl(221, 100%, 96%);
-    --light-lavender: hsl(241, 100%, 89%);
-    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* colours */
+    --colour-light-red: hsl(0, 91%, 63%);
+    --colour-organgey-yellow: hsl(39, 100%, 56%);
+    --colour-green-teal: hsl(166, 100%, 37%);
+    --colour-cobalt-blue: hsl(234, 85%, 45%);
+    --colour-light-slate-blue: hsl(252, 100%, 67%);
+    --colour-light-royal-blue: hsl(241, 81%, 54%);
+    --colour-violet-blue: hsla(256, 72%, 46%, 1);
+    --colour-persian-blue: hsla(241, 72%, 46%, 0);
+    --colour-pale-blue: hsl(221, 100%, 96%);
+    --colour-light-lavender: hsl(241, 100%, 89%);
+    --colour-dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 /* *contains main */
-body {
-    font-size: 1.125rem;
+body#results-component {
+    font-size: var(--body-font-size);
     font-family: var(--myFont);
     letter-spacing: 0.025rem;
 }
 
 /* *purple background */
-section.result-section {
+#results-component section.result-section {
     border-radius: 0 0 2rem 1.5rem;
     padding: 2rem 0 1.8rem;
 }
 
-section.result-section,
-button.continue-btn:hover {
+#results-component section.result-section,
+#results-component button.continue-btn:hover {
     background-image: linear-gradient(
-        var(--light-slate-blue),
-        var(--light-royal-blue)
+        var(--colour-light-slate-blue),
+        var(--colour-light-royal-blue)
     );
 }
 
 /* *text container in purple background */
-div.result-text {
+#results-component div.result-text {
     text-align: center;
-    margin: 0 auto;
+    margin: var(--margin-horizontally-centred);
 }
 
 /* *"Your result" text */
-h3.top-text {
+#results-component h3.top-text {
     color: hsla(222, 100%, 96%, 0.805);
-    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+    font-size: var(--result-text-font-size);
     margin-bottom: 1.2rem;
 }
 
 /* *circle around "76 of 100" */
-div.results-circle {
+#results-component div.results-circle {
     position: relative;
     background-image: linear-gradient(
         rgba(78, 33, 202, 0.777),
@@ -65,151 +86,151 @@ div.results-circle {
     border-radius: 50%;
     width: clamp(5.625rem, 28.5vw, 11rem);
     height: clamp(5.625rem, 28.5vw, 11rem);
-    margin: 0 auto 1.5rem;
+    margin: var(--margin-horizontally-centred) 1.5rem;
 }
 
 /* *both span elements in the heading */
-h1#heading span {
+#results-component h1#heading span {
     position: absolute;
 }
 
 /* *76 */
-span.avg-score {
+#results-component span.avg-score {
     top: clamp(1rem, 20%, 2rem);
     left: 0;
     right: 0;
-    font-size: clamp(2.125rem, 10.5vw, 3.7rem);
+    font-size: var(--avg-score-font-size);
     color: white;
 }
 
-span.of-100-text {
+#results-component span.of-100-text {
     top: 65%;
     left: 4vw;
     right: 4vw;
-    font-size: clamp(0.625rem, 3.25vw, 0.9rem);
+    font-size: var(--of-100-text-font-size);
     color: hsla(241, 100%, 89%, 0.445);
 }
 
-h2.great-text {
+#results-component h2.great-text {
     color: white;
-    font-size: clamp(1rem, 5.3vw, 1.3rem);
+    font-size: var(--great-text-font-size);
     margin-bottom: 0.5rem;
 }
 
-div.statistic-cont {
-    margin: 0 auto;
+#results-component div.statistic-cont {
+    margin: var(--margin-horizontally-centred);
     width: clamp(12.1875rem, 60%, 17.5rem);
 }
 /** "You scored higher than... paragraph" */
-p.statistic {
+#results-component p.statistic {
     color: hsla(241, 100%, 89%, 0.936);
-    font-size: clamp(0.625rem, 3.5vw, 0.9rem);
-    font-weight: 400;
+    font-size: var(--paragraph-font-size);
+    font-weight: var(--font-weight-regular);
 }
 
 /* @!SUMMARY SECTION */
 
 /* !styles for each all components */
 
-svg.icon {
+#results-component svg.icon {
     width: clamp(0.9375rem, 5%, 1.375rem);
 }
 
-section.summary-section {
+#results-component section.summary-section {
     padding: 6% 8% 8%;
 }
 
-h4.summary-heading {
-    font-size: clamp(0.9375rem, 4vw, 1.25rem);
+#results-component h4.summary-heading {
+    font-size: var(--summary-heading-font-size);
     margin-bottom: 20px;
 }
 
-div.summary-component {
+#results-component div.summary-component {
     display: flex;
     padding: clamp(0.6875rem, 6%, 0.9375rem) 4%;
     border-radius: 0.4rem;
     margin-bottom: 3%;
 }
 
-div.text-and-score > * {
-    font-size: clamp(0.75rem, 3.9vw, 1rem);
+#results-component div.text-and-score > * {
+    font-size: var(--text-and-score-font-size);
 }
 
 /* *component text and score container */
-div.text-and-score {
+#results-component div.text-and-score {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
 /* *e.g "Reaction, Memory..." */
-h5.summary-component-text {
+#results-component h5.summary-component-text {
     margin-left: 0.625rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-semi-bold);
 }
 
-span.avg-score,
-span.score {
-    font-weight: 700;
+#results-component span.avg-score,
+#results-component span.score {
+    font-weight: var(--font-weight-bold);
 }
 
-span.out-of-100 {
-    color: var(--dark-gray-blue);
+#results-component span.out-of-100 {
+    color: var(--colour-dark-gray-blue);
 }
 
 /* !styles for each individual component */
 
-div.reaction-component {
+#results-component div.reaction-component {
     background-color: hsla(0, 100%, 67%, 0.076);
 }
 
-h5.reaction-text {
-    color: var(--light-red);
+#results-component h5.reaction-text {
+    color: var(--colour-light-red);
 }
 
-div.memory-component {
+#results-component div.memory-component {
     background-color: hsla(39, 100%, 56%, 0.076);
 }
 
-h5.memory-text {
-    color: var(--organgey-yellow);
+#results-component h5.memory-text {
+    color: var(--colour-organgey-yellow);
 }
 
-div.verbal-component {
+#results-component div.verbal-component {
     background-color: hsla(166, 100%, 37%, 0.076);
 }
 
-h5.verbal-text {
-    color: var(--green-teal);
+#results-component h5.verbal-text {
+    color: var(--colour-green-teal);
 }
 
-div.visual-component {
+#results-component div.visual-component {
     background-color: hsla(256, 72%, 46%, 0.076);
 }
 
-h5.visual-text {
-    color: var(--cobalt-blue);
+#results-component h5.visual-text {
+    color: var(--colour-cobalt-blue);
 }
 
-button.continue-btn {
+#results-component button.continue-btn {
     font-family: var(--myFont);
     border: none;
     border-radius: 1.875rem;
     padding: 0.9rem;
-    font-size: 0.9375rem;
-    background-color: var(--dark-gray-blue);
+    font-size: var(--button-font-size);
+    background-color: var(--colour-dark-gray-blue);
     color: white;
     letter-spacing: 0.025rem;
     margin-top: 0.625rem;
     width: 100%;
 }
 
-h3.top-text,
-span.of-100-text,
-h2.great-text,
-span.out-of-100,
-button.continue-btn {
-    font-weight: 500;
+#results-component h3.top-text,
+#results-component span.of-100-text,
+#results-component h2.great-text,
+#results-component span.out-of-100,
+#results-component button.continue-btn {
+    font-weight: var(--font-weight-medium);
 }
 
 /* !DESKTOP */
@@ -217,7 +238,7 @@ button.continue-btn {
 /* 1000px */
 
 @media only screen and (min-width: 62rem) {
-    body {
+    #results-component body {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -225,49 +246,49 @@ button.continue-btn {
         background-color: rgba(0, 0, 0, 0.106);
     }
 
-    main {
+    #results-component main {
         width: clamp(600px, 60%, 650px);
     }
 
     /* *white background around both results and summary section */
-    div.bg {
+    #results-component div.bg {
         border-radius: 2rem;
         display: flex;
         background-color: rgb(255, 255, 255);
         box-shadow: 0.625rem 0.625rem 0.9375rem 0.3rem hsl(241, 100%, 89%, 0.2);
     }
 
-    section.result-section {
+    #results-component section.result-section {
         border-radius: 2rem;
     }
 
-    div.results-circle {
+    #results-component div.results-circle {
         margin-bottom: 2rem;
     }
 
-    section.summary-section {
+    #results-component section.summary-section {
         padding: 5% 5% 8%;
     }
 
     /* *"Your result" text */
-    h3.top-text {
-        margin-bottom: 25px;
+    #results-component h3.top-text {
+        margin-bottom: 1.5625rem;
     }
 
-    h2.great-text {
+    #results-component h2.great-text {
         font-size: 1.6rem;
         margin-bottom: 1rem;
     }
 
-    h4.summary-heading {
-        font-size: 20px;
+    #results-component h4.summary-heading {
+        font-size: 1.25rem;
     }
 
-    div.summary-component {
+    #results-component div.summary-component {
         margin-bottom: 6%;
     }
 
-    p.statistic {
+    #results-component p.statistic {
         font-size: 0.9rem;
     }
 }
