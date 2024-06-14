@@ -1,28 +1,41 @@
-let avgScore = document.querySelector(".avg-score");
+const avgScore = document.querySelector(".avg-score");
+
+// error handling for if the class is not found 
+if (!avgScore) {
+    console.error("Error: Element with class 'avg-score' not found.")
+} else {
+    displayAvgScore();
+}
 
 
 // *function that retrieves and displays json data
-(async function () {
-  async function getData() {
+async function displayAvgScore() {
+    async function getData() {
 
-    // retrieving array from json file
-    const response = await fetch("/data.json")
-    const data = await response.json();
-    return data;
-  }
+        // error handling for if there's an error retrieving the JSON file
+        try {
+            // retrieving array from json file
+            const response = await fetch("/data.json");
+            const data = await response.json();
+            return data;
+        }
 
-  // extracting the scores from the array
-  const [one, two, three, four] = await getData();
+        catch (error) {
+            alert("Error:  JSON file not found");
+        }
 
-  const score1 = one.score;
-  const score2 = two.score;
-  const score3 = three.score;
-  const score4 = four.score;
+    }
 
-  const average = Math.floor((score1 + score2 + score3 + score4) / 4);
+    // extracting the scores from the JSON array
+    const [one, two, three, four] = await getData();
 
-  avgScore.innerText = average
-})();
+    // calculation of the array  
+    const average = Math.floor((one.score + two.score + three.score + four.score) / 4);
+
+
+    // setting the html to these final result
+    avgScore.innerText = average;
+};
 
 
 
