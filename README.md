@@ -44,8 +44,6 @@ Users should be able to:
 -   Flexbox
 -   Vanilla Javascript
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 I mastered how to use clamp for responsive typography, and responsive elements. I also learned how to make beautiful looking elements with gradients.
@@ -83,6 +81,7 @@ I also learned how use a self-invoking function in Javascript.
 ### Continued development
 
 I want to keep on mastering responsive design with clamp, and make colors look even more visually appealing with gradients.
+I also want to keep on improving my asynchronous javascript and error handling.
 
 ### Useful resources
 
