@@ -12,14 +12,19 @@ if (!avgScore) {
 async function displayAvgScore() {
     async function getData() {
 
-        // error handling for if there's an error retrieving the JSON file
+        // error handling for retrieving the JSON file
         try {
-            // retrieving array from json file
-            const response = await fetch("/data.json");
-            const data = await response.json();
-            return data;
-        }
+            const response = await fetch("/data.json"); //fetch() returns response object (after being resolved with await)
 
+            // error handling for parsing response object into a JSON file
+            try {
+                const data = await response.json(); // response.json() parses response object into json (after being resolved with await)
+                return data
+
+            } catch (jsonError) {
+                alert("Error: Failed to parse JSON data.");
+            }
+        }
         catch (error) {
             alert("Error:  JSON file not found");
         }
