@@ -23,7 +23,6 @@
     --font-weight-semi-bold: 600;
     --font-weight-bold: 700;
     --button-font-size: 0.9375rem;
-    --margin-horizontally-centred: 0 auto;
 
     /* font family */
     --myFont: "Hanken Grotesk", sans-serif;
@@ -40,6 +39,8 @@
     --colour-pale-blue: hsl(221, 100%, 96%);
     --colour-light-lavender: hsl(241, 100%, 89%);
     --colour-dark-gray-blue: hsl(224, 30%, 27%);
+
+    --margin-horizontally-centred: 0 auto;
 }
 
 /* *contains main */
@@ -238,7 +239,7 @@ body#results-component {
 /* 1000px */
 
 @media only screen and (min-width: 62rem) {
-    #results-component body {
+    #results-component {
         display: flex;
         align-items: center;
         justify-content: center;
